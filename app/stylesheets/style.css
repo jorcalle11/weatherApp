@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* metodología BEM and mobile First */
+html {
+  font-size: 110%; }
+
+body {
+  background-color: #FDFFFC;
+  font-family: 'Merriweather Sans', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.header-main {
+  background-color: #011627;
+  color: #FF9F1C;
+  margin-bottom: 1.5em;
+  padding: 2em;
+  text-align: center; }
+
+.header-main__title {
+  margin: 0; }
+
+.header-main__subtitle {
+  margin: 0;
+  font-size: .8em; }
+
+.cards-group {
+  margin-right: 5px;
+  margin-left: 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start; }
+
+.card {
+  background-color: #0997b6;
+  background-size: cover;
+  background-position: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #FDFFFC;
+  height: 250px;
+  margin: 5px;
+  position: relative;
+  width: 100%; }
+
+.card-hongKong {
+  background-image: url("../images/HongKong-small.jpg"); }
+
+.card-chicago {
+  background-image: url("../images/chicago-small.jpeg"); }
+
+.card[data-city="sahagun"] {
+  background-image: url("../images/sahagun.jpg"); }
+
+.card__header {
+  text-align: center; }
+
+.card__title {
+  margin: 2px; }
+
+.card__date {
+  border-bottom: 1px solid #dad984;
+  font-weight: normal;
+  font-size: 12px;
+  font-family: courier; }
+
+.card__footer {
+  position: absolute;
+  left: .5em;
+  bottom: .5em;
+  text-align: center; }
+
+.card__logo {
+  display: block; }
+
+.card__temperature {
+  font-size: 2em;
+  display: block; }
+
+.card__temperature::after {
+  content: "°C";
+  color: #FF9F1C; }
+
+.card__min-temperature::before {
+  content: "Min: "; }
+
+.card__min-temperature::after {
+  content: "°C";
+  color: #0997b6; }
+
+.card__max-temperature::before {
+  content: "Max: "; }
+
+.card__max-temperature::after {
+  content: "°C";
+  color: #E71D36; }
+
+.transparent {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 80%; }
+  .card {
+    width: 300px; }
+  .card-hongKong {
+    background-image: url("../images/HongKong-small.jpg"); }
+  .card-chicago {
+    background-image: url("../images/chicago-small.jpeg"); } }
+
+/*
+@media (max-width: 600px) and (orientation: landscape) {
+  .header-main {
+    background-color: #FF9F1C;
+    color: #011627;
+  }
+}*/

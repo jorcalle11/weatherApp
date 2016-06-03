@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Aplicación para revisar el clima de las ciudades mas importantes del mundo.",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": [
+    "weather",
+    "city"
+  ],
+  "author": "Jorge Calle",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.0.0",
+    "gulp-sass": "^2.3.1"
+  }
+}

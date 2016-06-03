@@ -1,0 +1,176 @@
+/* metodología BEM and mobile First */
+$blanco :     #FDFFFC;
+$rojo:        #E71D36;
+$azulOscuro:  #011627;
+$oro:         #FF9F1C;
+$azulCeleste: rgb(9, 151, 182);
+$amarillo:    rgb(218, 217, 132);
+
+$hongKongSmall: '../images/HongKong-small.jpg';
+$hongKong:      '../images/HongKong.jpg';
+$chicagoSmall:  '../images/chicago-small.jpeg';
+$chicago:       '../images/chicago.jpeg';
+$sahagun:       '../images/sahagun.jpg';
+
+@mixin backgroundImageCard ($image) {
+  background-image: url($image);
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin border-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 110%;
+}
+
+body {
+  background-color: $blanco;
+  font-family: 'Merriweather Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header-main {
+  background-color: $azulOscuro;
+  color: $oro;
+  margin-bottom: 1.5em;
+  padding: 2em;
+  text-align: center;
+}
+
+.header-main__title {
+  margin: 0;
+}
+
+.header-main__subtitle {
+  margin: 0;
+  font-size: .8em;
+}
+
+.cards-group {
+  margin-right: 5px;
+  margin-left: 5px;
+  @include flexbox();
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  background-color: $azulCeleste;
+  background-size: cover;
+  background-position: center;
+  @include border-sizing();
+  color: $blanco;
+  height: 250px;
+  margin: 5px;
+  position: relative;
+  width: 100%;
+}
+
+  .card-hongKong {
+    @include backgroundImageCard($hongKongSmall);
+  }
+
+  .card-chicago {
+    @include backgroundImageCard($chicagoSmall);
+  }
+
+  .card[data-city="sahagun"] {
+    @include backgroundImageCard($sahagun);
+  }
+
+  .card__header {
+    text-align: center;
+  }
+
+  .card__title {
+    margin: 2px;
+  }
+
+  .card__date {
+    border-bottom: 1px solid $amarillo;
+    font-weight: normal;
+    font-size: 12px;
+    font-family: courier;
+  }
+
+  .card__footer {
+    position: absolute;
+    left: .5em;
+    bottom: .5em;
+    text-align: center;
+  }
+    .card__logo {
+      display: block;
+    }
+
+    .card__temperature {
+      font-size: 2em;
+      display: block;
+    }
+
+    .card__temperature::after {
+      content: "°C";
+      color: $oro;
+    }
+
+    .card__min-temperature::before {
+      content: "Min: "
+    }
+
+    .card__min-temperature::after {
+      content: "°C";
+      color: $azulCeleste;
+    }
+
+    .card__max-temperature::before {
+      content: "Max: "
+    }
+
+    .card__max-temperature::after {
+      content: "°C";
+      color: $rojo;
+    }
+.transparent {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 80%;
+  }
+
+  .card {
+    width: 300px;
+  }
+    .card-hongKong {
+      @include backgroundImageCard($hongKongSmall);
+    }
+
+    .card-chicago {
+      @include backgroundImageCard($chicagoSmall);
+    }
+}
+
+
+/*
+@media (max-width: 600px) and (orientation: landscape) {
+  .header-main {
+    background-color: #FF9F1C;
+    color: #011627;
+  }
+}*/

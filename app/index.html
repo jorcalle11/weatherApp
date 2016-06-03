@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Platzi</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700' rel='stylesheet'/>
+  </head>
+  <body>
+    <header class="header-main">
+      <h1 class="header-main__title">Weather App</h1>
+      <h4 class="header-main__subtitle">Revisa el clima de las diferentes ciudades del mundo.</h4>
+    </header>
+    <main class="cards-group">
+      <template id="template--city">
+        <article class="card">
+          <div class="transparent">
+            <header class="card__header">
+              <h3 class="card__title"></h3>
+              <h4 class="card__date"></h4>
+            </header>
+            <div class="card__footer">
+              <figure>
+                <img src="http://openweathermap.org/img/w/02d.png" class="card__logo"/>
+              </figure>
+              <span class="card__min-temperature"></span>
+              <span class="card__max-temperature"></span>
+              <span class="card__temperature"></span>
+            </div>
+          </div>
+        </article>
+      </template>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
