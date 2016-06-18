@@ -12,21 +12,26 @@
       <h1 class="header-main__title">Weather App</h1>
       <h4 class="header-main__subtitle">Revisa el clima de las diferentes ciudades del mundo.</h4>
     </header>
+    <div class="loader">Geolocalizando, por favor espere...</div>
+    <form action="" class="search">
+      <input type="text" data-search="nameCity" class="search__text" placeholder="Escribe el nombre de una ciudad">
+      <input type="submit" data-button="addCity" class="search__button" value="Agregar ciudad">
+    </form>
     <main class="cards-group">
       <template id="template--city">
-        <article class="card">
+        <article class="card card-hongKong">
           <div class="transparent">
             <header class="card__header">
-              <h3 class="card__title"></h3>
-              <h4 class="card__date"></h4>
+              <h3 data-city class="card__title"></h3>
+              <h4 data-time class="card__date"></h4>
             </header>
             <div class="card__footer">
               <figure>
-                <img src="http://openweathermap.org/img/w/02d.png" class="card__logo"/>
+                <img data-icon src="" class="card__logo"/>
               </figure>
-              <span class="card__min-temperature"></span>
-              <span class="card__max-temperature"></span>
-              <span class="card__temperature"></span>
+              <span data-temp="min" class="card__min-temperature"></span>
+              <span data-temp="max" class="card__max-temperature"></span>
+              <span data-temp="current" class="card__temperature"></span>
             </div>
           </div>
         </article>

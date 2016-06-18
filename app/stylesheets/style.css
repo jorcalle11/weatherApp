@@ -23,6 +23,43 @@ body {
   margin: 0;
   font-size: .8em; }
 
+.search {
+  margin: 0 auto 1em auto;
+  width: 98%;
+  text-align: center; }
+
+.search__button {
+  background-color: #E71D36;
+  border: 1px transparent;
+  color: #FDFFFC;
+  cursor: pointer;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  margin-left: -4px;
+  padding: 10px; }
+
+.search__button:active {
+  -webkit-transform: scale(0.98);
+  /* Safari and Chrome */
+  -moz-transform: scale(0.98);
+  /* Firefox */
+  -ms-transform: scale(0.98);
+  /* IE 9 */
+  -o-transform: scale(0.98);
+  /* Opera */
+  transform: scale(0.98); }
+
+.search__text {
+  padding-top: 5px;
+  width: 55%;
+  padding-bottom: 5px;
+  font-size: 1.2em;
+  line-height: 1.6em; }
+
+[data-search="nameCity"]:focus {
+  outline-color: #0997b6;
+  color: #011627; }
+
 .cards-group {
   margin-right: 5px;
   margin-left: 5px;
@@ -32,6 +69,7 @@ body {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start; }
 
@@ -44,8 +82,8 @@ body {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   color: #FDFFFC;
+  margin: 3px;
   height: 250px;
-  margin: 5px;
   position: relative;
   width: 100%; }
 
@@ -105,9 +143,22 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3); }
 
+.loader {
+  font-size: 1em;
+  margin: 1em;
+  text-align: center; }
+
 @media screen and (min-width: 700px) {
   html {
     font-size: 80%; }
+  .loader {
+    font-size: 2em; }
+  .search__button {
+    font-size: 1.7em;
+    line-height: 1.8em; }
+  .search__text {
+    font-size: 1.8em;
+    line-height: 1.9em; }
   .card {
     width: 300px; }
   .card-hongKong {
